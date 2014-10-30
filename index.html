@@ -235,7 +235,7 @@ document.querySelector(<span class="string">'div.header'</span>).appendChild(p);
           <h3>Anatomy of a jQuery call</h3>
           <pre><code class="javascript">$(<span class="string">'p'</span>).addClass(<span class="string">'special'</span>);</code></pre>
           <p class="fragment"><span class="blue left">$()</span> <span>Global jQuery function. Alternately "jQuery()" Used to trigger all jQuery functionality.</span></p>
-          <p class="fragment"><span class="blue left">'p'</span> <span>Argument being passed into the global jQuery function. In this case, a selector to return all 'p' elements. Also accepts variables and html strings. Returns a jQuery collection/object</span></p>
+          <p class="fragment"><span class="blue left">'p'</span> <span>Argument being passed into the global jQuery function. In this case, a <b>selector</b> to return all 'p' elements. Also accepts variables and html strings. Returns a jQuery collection/object</span></p>
           <p class="fragment"><span class="blue left">.</span> <span>We'll get back to this</span></p>
           <p class="fragment"><span class="blue left">addClass('')</span> <span>jQuery method to add the specified class to each element in the collection. <a href="http://api.jquery.com/addClass/">http://api.jquery.com/addClass/</a></span></p>
         </section>
@@ -243,20 +243,23 @@ document.querySelector(<span class="string">'div.header'</span>).appendChild(p);
 
         <section>
           <h2>Functions in Disguise</h2>
-          <p>The $ (and jQuery), and addClass Method are just functions!</p>
-          <pre><code class="javascript large">
-Name(Argument)
+          <p>The <code>$</code> (and <code>jQuery</code>), and <code>.addClass()</code> are just functions!</p>
+
+          <pre class="fragment"><code class="javascript large">
+  $('p')
           </code></pre>
 
-          <pre><code class="javascript large">
-$('p')
+          <pre class="fragment"><code class="javascript large">
+  // These are just two functions "chained" together!
+  $('p').addClass('special');
           </code></pre>
 
-          <pre><code class="javascript large">
-myFunction('hello world')
+          <pre class="fragment"><code class="javascript large">
+  Name(argument)
+
+  function(argument)
           </code></pre>
         </section>
-
 
         <section id="selectors" class="twoColumns future" style="display: none;">
           <h3>Selectors</h3>

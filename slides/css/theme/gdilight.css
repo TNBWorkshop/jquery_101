@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
   font-family: "Gotham";
   src: local("Gotham"), url("fonts/Gotham/Gotham-Medium.otf") format("opentype");
   font-weight: normal;
@@ -20,7 +20,7 @@
   font-family: "Gotham-Bold";
   src: local("Gotham-Bold"), url("fonts/Gotham/Gotham-Bold.otf") format("opentype");
   font-weight: bold;
-  font-style: bold; }
+  font-style: bold; }*/
 
 /*********************************************
  * GLOBAL STYLES

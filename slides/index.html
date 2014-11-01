@@ -319,7 +319,10 @@ document.querySelector(<span class="string">'div.header'</span>).appendChild(p);
           <p><span class="blue left">$('a').html();</span> <span>"Google"</span></p>
           <p><span class="blue left">$('a').attr('href');</span> <span>"http://www.google.com"</span></p>
           <p><span class="blue left">$('a').css('color');</span> <span>"green"</span></p>
-          <p class="fragment" style="clear: both;">Read some properties of the link to Yasmine's email.</p>
+          <p class="fragment" style="clear: both;">
+            <br />
+            On the example page, some properties of the link to Yasmine's email.
+          </p>
         </section>
 
 
@@ -331,23 +334,43 @@ document.querySelector(<span class="string">'div.header'</span>).appendChild(p);
           <p class="blue left">$('a').css({'color': 'purple'});</p>
         </section>
 
+        <section>
+          <h2>Recap: Getting vs. Setting</h2>
+
+          <p>Many of jQuery's methods do double-duty.</p>
+          <p class="fragment blue">&lt;p&gt;What's in here?&lt;/p&gt;</p>
+          <pre class="fragment"><code class="javascript">
+  $('p').html();  // No argument, will get the value "What's in here?"
+          </code></pre>
+
+          <pre class="fragment"><code class="javascript">
+  $('p').html("Heyo!");  // SETS the value!
+          </code></pre>
+
+          <p class="fragment blue">&lt;p&gt;Heyo!&lt;/p&gt;</p>
+
+        </section>
+
 
         <section class="future" style="display: none;">
           <h3>Chaining</h3>
           <p>That same set of manipulations could be written as</p>
-          <pre><code class="javascript">$(<span class="string">'a'</span>).html(<span class="string">'Yahoo'</span>)
-.attr(<span class="string">'href'</span>,<span class="string">'http://www.yahoo.com'</span>)
-.css({<span class="string">'color'</span>:<span class="string">'purple'</span>});</code></pre>
+          <pre><code class="javascript">
+$('a').html('Yahoo')
+  .attr('href','http://www.yahoo.com')
+  .css({'color':'purple'});
+          </code></pre>
           <p class="fragment">because each jQuery function returns the collection again.</p>
           <p class="fragment">This is called "chaining" and is done with a period between method calls.</p>
           <p class="fragment">Chaining is a widely appreciated feature of jQuery.</p>
         </section>
 
-
         <section>
-          <h3>The Train (Chain) of Functions</h3>
-
-          <p>Stub: Illustration of a chain of boxes. In, Out, In, Out.</p>
+          <h3>A Train (Chain) of Functions</h3>
+          <pre class="fragment"><code class="javascript center">
+  $('p').addClass('special').html('hello!');
+          </code></pre>
+          <p class="fragment"><img class="no-border" src="./files/ChainingExample.png" /></p>
         </section>
 
 
